@@ -58,7 +58,21 @@ function checkInput(){
     }
 }
 addBtn.addEventListener("click", function() {
-    checkInput()
-    input.value="";
+    if(input.value != "") {
+        checkInput()
+        input.value="";
+    }
+    else  {
+        alert("No se puede enviar una tarea vacia")
+    }
 }) 
+/* addBtn.addEventListener("onkeypress", function (e) {
+    if  ( e.keyCode == 13 && input.value != "") {
+        checkInput()
+        input.value = "";
+    }
+    else {
+        alert("No se puede enviar una tarea vacia")
+    }
+}) */
 
